@@ -33,6 +33,6 @@ This problem requires you to implement a betaout email system. You have to imple
 
 ## Screenshots
 
-- [Hello Api] (./ScreenShots/hello.png)
-- [Post Mail Api] (./ScreenShots/post_mail.png)
-- [Get Count of Mail] (./ScreenShots/getCount_mail.png)
+![Hello Api](ScreenShots/hello.PNG)
+![Post Mail Api](ScreenShots/post_mail.PNG)
+![Get Count of Mail](ScreenShots/getCount_mail.PNG)
