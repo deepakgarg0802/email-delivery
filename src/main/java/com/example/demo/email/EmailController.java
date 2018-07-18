@@ -46,12 +46,12 @@ public class EmailController {
         @ApiResponse(code = 200, message = "Success", response = String.class),
         @ApiResponse(code = 400, message = "Bad request", response = String.class)
     })
-	public String getmymail(@RequestBody Map<String, String> json){
+	public String getmymail(@RequestBody Email email){
 
-		String from= json.get("from");
-		String body=json.get("body");
-		String emailId= json.get("emailId");
-		String subject=json.get("subject");
+		String from= email.getFrom();
+		String body=email.getBody();
+		String emailId= email.getEmailId();
+		String subject=email.getSubject();
 		mailSender.sendMail(from, emailId, subject, body);
 		count.put(emailId, count.getOrDefault(emailId, 0) + 1);
 
