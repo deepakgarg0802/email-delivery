@@ -3,13 +3,24 @@ package com.example.demo.email;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
+@ApiModel("Email")
 public class Email {
 
 	@Id
+	@ApiModelProperty(value = "Email id on which mail has to be sent", required = true)
 	private String email_id;
+	
+	@ApiModelProperty(value = "Subject of Mail", required = true)
 	private String subject;
+	
+	@ApiModelProperty(value = "Body of Mail", required = true)
 	private String body;
+	
+	@ApiModelProperty(value = "Sender of Mail", required = true)
 	private String from;
 	
 	public Email() {
